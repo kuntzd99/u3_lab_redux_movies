@@ -16,7 +16,6 @@ export const GetMovieDetails = async (id) => {
     const res = await Client.get(
       `/movie/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
     )
-    console.log(res.data)
     return res.data
   } catch (error) {
     throw error
